@@ -3,6 +3,12 @@ import os
 import sys
 
 if __name__ == "__main__":
+
+    # reload module sys and set utf-8 as default encoding
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+
+
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cafe.settings")
     try:
         from django.core.management import execute_from_command_line
